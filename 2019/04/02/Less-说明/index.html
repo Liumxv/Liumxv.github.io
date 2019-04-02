@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Less 说明 | Liumxv</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Web,">
+  
+
+  <meta name="description" content="LessLess是一种CSS预处理技术 官方文档 lang1234##### 1. 变量以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉 @mainColor : #D1D1D1;@siteWidth: 1024px; body{    background-color: @mainColor;    max-width: @siteWidth;} 12##### 2">
+<meta name="keywords" content="Web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Less 说明">
+<meta property="og:url" content="http://yoursite.com/2019/04/02/Less-说明/index.html">
+<meta property="og:site_name" content="Liumxv">
+<meta property="og:description" content="LessLess是一种CSS预处理技术 官方文档 lang1234##### 1. 变量以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉 @mainColor : #D1D1D1;@siteWidth: 1024px; body{    background-color: @mainColor;    max-width: @siteWidth;} 12##### 2">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-02T07:08:38.402Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Less 说明">
+<meta name="twitter:description" content="LessLess是一种CSS预处理技术 官方文档 lang1234##### 1. 变量以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉 @mainColor : #D1D1D1;@siteWidth: 1024px; body{    background-color: @mainColor;    max-width: @siteWidth;} 12##### 2">
+
+  
+
+  
+    <link rel="icon" href="/images/avatar.jpg">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">导航</span>
+  
+
+  <div class="post-header LEFT">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">导航</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="https://github.com/Liumxv" rel="noopener noreferrer" target="_blank">
+            Github
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Less"><span class="toc-text">Less</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post LEFT">
+   <article id="post-Less-说明" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Less 说明</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.04.02</span>
+      </span>
+
+      
+
+      
+
+
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h2><p>Less是一种CSS预处理技术 <a href="http://lesscss.org/#" target="_blank" rel="noopener">官方文档</a></p>
+<figure class="highlight plain"><figcaption><span>lang</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 1. 变量</span><br><span class="line"></span><br><span class="line">以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉</span><br></pre></td></tr></table></figure>
+<p>@mainColor : #D1D1D1;<br>@siteWidth: 1024px;</p>
+<p>body{<br>    background-color: @mainColor;<br>    max-width: @siteWidth;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 2. 嵌套</span><br><span class="line">在相同的parent里面引用多个元素, 可以用嵌套的写法, 父节点关系很清晰, 不影响最终效果.</span><br></pre></td></tr></table></figure>
+<p>body{<br>    margin: 20px;<br>    h1 {<br>        text-color: #FF0000;</p>
+<pre><code>}
+p {
+    text-align: center;
+}
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最终生成的效果是：</span><br></pre></td></tr></table></figure></p>
+<p>body {<br>    margin: 20px;<br>}<br>body h1 {<br>    text-color: #FF0000;<br>}<br>body p {<br>    text-align: center;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 3. 混入(Mixins)</span><br><span class="line">类似一个宏定义或者函数, 可以带参数进来. 当某段CSS需要在多个地方使用的时候, 可以提前定义, 在需要用的时候引入即可.</span><br></pre></td></tr></table></figure></p>
+<p>.error(@borderWidth: 2px){<br>    border: @borderWidth solid #FF0000;<br>}<br>.generic-error {<br>    padding: 20px;<br>    margin: 4px;<br>    .error(5px);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最终生成的效果是：</span><br></pre></td></tr></table></figure></p>
+<p>.generic-error {<br>    padding: 20px;<br>    margin: 4px;<br>    border: 5px solid #FF0000;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 4. 继承</span><br><span class="line">当我们需要为多个不同的元素设置同一种样式时, 可以使用继承, 先定义一个样式代码块, 然后让对应的元素继承即可. 在Less里面支持并不是很好, 和 Mixins 比较类似</span><br></pre></td></tr></table></figure></p>
+<p>.block {<br>    margin: 10px 5px;<br>    background: #000000;<br>}<br>p {<br>    .block;<br>    border: 1px solid #FF0000;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最终生成的效果是：</span><br></pre></td></tr></table></figure></p>
+<p>p {<br>    margin: 10px 5px;<br>    background: #000000;<br>    border: 1px solid #FF0000;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 5. 导入 (import)</span><br><span class="line">导入进来的CSS样式会加入进来, 注意避免样式冲突</span><br></pre></td></tr></table></figure></p>
+<p>@ import “*.css”;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 6. 颜色函数 </span><br><span class="line">提供多种函数来生成颜色, 也可以支持颜色的运算 [文档](http://lesscss.org/functions/#color-operations)</span><br></pre></td></tr></table></figure></p>
+<p>rgb(255,0,0)        output=&gt;        #FF0000<br>rgba(10,50,50)    output=&gt;        rgba(10,50,50)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 7. 运算符</span><br><span class="line">可以直接在CSS预处理器中进行计算, 提供了多种计算函数 [文档](http://lesscss.org/functions/#math-functions)</span><br></pre></td></tr></table></figure></p>
+<p>body{<br>    margin: (10px * 2)<br>}<br>sin(1);<br>cos(0)<br><code>`</code></p>
+
+    
+  </div>
+
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/01/10/MacOS支持的emacs快捷键整理/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="https://github.com/Liumxv" rel="noopener noreferrer" target="_blank">
+              Github
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
