@@ -15,18 +15,18 @@
     <meta name="keywords" content="Web,">
   
 
-  <meta name="description" content="LessLess是一种CSS预处理技术 官方文档 lang1234##### 1. 变量以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉 @mainColor : #D1D1D1;@siteWidth: 1024px; body{    background-color: @mainColor;    max-width: @siteWidth;} 12##### 2">
+  <meta name="description" content="LessLess是一种CSS预处理技术 官方文档 &amp;lt;style lang=&amp;quot;less&amp;quot;&amp;gt; 1. 变量以@开始, 类似OC里面的#define, 处理完以后会自动替换掉 1234567@mainColor : #D1D1D1;@siteWidth: 1024px;body&amp;#123;	background-color: @mainColor;	max-width: @">
 <meta name="keywords" content="Web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Less 说明">
 <meta property="og:url" content="http://yoursite.com/2019/04/02/Less-说明/index.html">
 <meta property="og:site_name" content="Liumxv">
-<meta property="og:description" content="LessLess是一种CSS预处理技术 官方文档 lang1234##### 1. 变量以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉 @mainColor : #D1D1D1;@siteWidth: 1024px; body{    background-color: @mainColor;    max-width: @siteWidth;} 12##### 2">
+<meta property="og:description" content="LessLess是一种CSS预处理技术 官方文档 &amp;lt;style lang=&amp;quot;less&amp;quot;&amp;gt; 1. 变量以@开始, 类似OC里面的#define, 处理完以后会自动替换掉 1234567@mainColor : #D1D1D1;@siteWidth: 1024px;body&amp;#123;	background-color: @mainColor;	max-width: @">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-02T07:15:03.283Z">
+<meta property="og:updated_time" content="2019-04-02T07:21:54.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Less 说明">
-<meta name="twitter:description" content="LessLess是一种CSS预处理技术 官方文档 lang1234##### 1. 变量以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉 @mainColor : #D1D1D1;@siteWidth: 1024px; body{    background-color: @mainColor;    max-width: @siteWidth;} 12##### 2">
+<meta name="twitter:description" content="LessLess是一种CSS预处理技术 官方文档 &amp;lt;style lang=&amp;quot;less&amp;quot;&amp;gt; 1. 变量以@开始, 类似OC里面的#define, 处理完以后会自动替换掉 1234567@mainColor : #D1D1D1;@siteWidth: 1024px;body&amp;#123;	background-color: @mainColor;	max-width: @">
 
   
 
@@ -140,7 +140,7 @@ ga('send', 'pageview');
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Less"><span class="toc-text">Less</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Less"><span class="toc-text">Less</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-变量"><span class="toc-text">1. 变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-嵌套"><span class="toc-text">2. 嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-混入-Mixins"><span class="toc-text">3. 混入(Mixins)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-继承"><span class="toc-text">4. 继承</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-导入-import"><span class="toc-text">5. 导入 (import)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-颜色函数"><span class="toc-text">6. 颜色函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-运算符"><span class="toc-text">7. 运算符</span></a></li></ol></li></ol>
   </div>
 
 
@@ -176,24 +176,27 @@ ga('send', 'pageview');
   <div class="article-content">
     
       <h2 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h2><p>Less是一种CSS预处理技术 <a href="http://lesscss.org/#" target="_blank" rel="noopener">官方文档</a></p>
-<figure class="highlight plain"><figcaption><span>lang</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 1. 变量</span><br><span class="line"></span><br><span class="line">以```@```开始, 类似OC里面的#define, 处理完以后会自动替换掉</span><br></pre></td></tr></table></figure>
-<p>@mainColor : #D1D1D1;<br>@siteWidth: 1024px;</p>
-<p>body{<br>    background-color: @mainColor;<br>    max-width: @siteWidth;<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 2. 嵌套</span><br><span class="line">在相同的parent里面引用多个元素, 可以用嵌套的写法, 父节点关系很清晰, 不影响最终效果.</span><br></pre></td></tr></table></figure>
-<p>body{<br>    margin: 20px;<br>    h1 {<br>        text-color: #FF0000;</p>
-<pre><code>}
-p {
-    text-align: center;
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最终生成的效果是：</span><br></pre></td></tr></table></figure></p>
-<p>body {<br>    margin: 20px;<br>}<br>body h1 {<br>    text-color: #FF0000;<br>}<br>body p {<br>    text-align: center;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 3. 混入(Mixins)</span><br><span class="line">类似一个宏定义或者函数, 可以带参数进来. 当某段CSS需要在多个地方使用的时候, 可以提前定义, 在需要用的时候引入即可.</span><br></pre></td></tr></table></figure></p>
-<p>.error(@borderWidth: 2px){<br>    border: @borderWidth solid #FF0000;<br>}<br>.generic-error {<br>    padding: 20px;<br>    margin: 4px;<br>    .error(5px);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最终生成的效果是：</span><br></pre></td></tr></table></figure></p>
-<p>.generic-error {<br>    padding: 20px;<br>    margin: 4px;<br>    border: 5px solid #FF0000;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 4. 继承</span><br><span class="line">当我们需要为多个不同的元素设置同一种样式时, 可以使用继承, 先定义一个样式代码块, 然后让对应的元素继承即可. 在Less里面支持并不是很好, 和 Mixins 比较类似</span><br></pre></td></tr></table></figure></p>
-<p>.block {<br>    margin: 10px 5px;<br>    background: #000000;<br>}<br>p {<br>    .block;<br>    border: 1px solid #FF0000;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最终生成的效果是：</span><br></pre></td></tr></table></figure></p>
-<p>p {<br>    margin: 10px 5px;<br>    background: #000000;<br>    border: 1px solid #FF0000;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 5. 导入 (import)</span><br><span class="line">导入进来的CSS样式会加入进来, 注意避免样式冲突</span><br></pre></td></tr></table></figure></p>
-<p>@ import “*.css”;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 6. 颜色函数 </span><br><span class="line">提供多种函数来生成颜色, 也可以支持颜色的运算 [文档](http://lesscss.org/functions/#color-operations)</span><br></pre></td></tr></table></figure></p>
-<p>rgb(255,0,0)        output=&gt;        #FF0000<br>rgba(10,50,50)    output=&gt;        rgba(10,50,50)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##### 7. 运算符</span><br><span class="line">可以直接在CSS预处理器中进行计算, 提供了多种计算函数 [文档](http://lesscss.org/functions/#math-functions)</span><br></pre></td></tr></table></figure></p>
-<p>body{<br>    margin: (10px * 2)<br>}<br>sin(1);<br>cos(0)<br><code>`</code></p>
+<p><code>&lt;style lang=&quot;less&quot;&gt;</code></p>
+<h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><p>以<code>@</code>开始, 类似OC里面的#define, 处理完以后会自动替换掉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@mainColor : #D1D1D1;</span><br><span class="line">@siteWidth: 1024px;</span><br><span class="line"></span><br><span class="line">body&#123;</span><br><span class="line">	background-color: @mainColor;</span><br><span class="line">	max-width: @siteWidth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-嵌套"><a href="#2-嵌套" class="headerlink" title="2. 嵌套"></a>2. 嵌套</h4><p>在相同的parent里面引用多个元素, 可以用嵌套的写法, 父节点关系很清晰, 不影响最终效果.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">	margin: 20px;</span><br><span class="line">	h1 &#123; </span><br><span class="line">		text-color: #FF0000;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	p &#123;</span><br><span class="line">		text-align: center;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终生成的效果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">	margin: 20px;</span><br><span class="line">&#125;</span><br><span class="line">body h1 &#123; </span><br><span class="line">	text-color: #FF0000;		</span><br><span class="line">&#125;</span><br><span class="line">body p &#123;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-混入-Mixins"><a href="#3-混入-Mixins" class="headerlink" title="3. 混入(Mixins)"></a>3. 混入(Mixins)</h4><p>类似一个宏定义或者函数, 可以带参数进来. 当某段CSS需要在多个地方使用的时候, 可以提前定义, 在需要用的时候引入即可. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.error(@borderWidth: 2px)&#123;</span><br><span class="line">	border: @borderWidth solid #FF0000;</span><br><span class="line">&#125;</span><br><span class="line">.generic-error &#123;</span><br><span class="line">	padding: 20px;</span><br><span class="line">	margin: 4px;</span><br><span class="line">	.error(5px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终生成的效果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.generic-error &#123;</span><br><span class="line">	padding: 20px;</span><br><span class="line">	margin: 4px;</span><br><span class="line">	border: 5px solid #FF0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-继承"><a href="#4-继承" class="headerlink" title="4. 继承"></a>4. 继承</h4><p>当我们需要为多个不同的元素设置同一种样式时, 可以使用继承, 先定义一个样式代码块, 然后让对应的元素继承即可. 在Less里面支持并不是很好, 和 Mixins 比较类似</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.block &#123;</span><br><span class="line">	margin: 10px 5px;</span><br><span class="line">	background: #000000;</span><br><span class="line">&#125;</span><br><span class="line">p &#123;</span><br><span class="line">	.block;</span><br><span class="line">	border: 1px solid #FF0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终生成的效果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">	margin: 10px 5px;</span><br><span class="line">	background: #000000;</span><br><span class="line">	border: 1px solid #FF0000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-导入-import"><a href="#5-导入-import" class="headerlink" title="5. 导入 (import)"></a>5. 导入 (import)</h4><p>导入进来的CSS样式会加入进来, 注意避免样式冲突</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@ import &quot;*.css&quot;;</span><br></pre></td></tr></table></figure>
+<h4 id="6-颜色函数"><a href="#6-颜色函数" class="headerlink" title="6. 颜色函数"></a>6. 颜色函数</h4><p>提供多种函数来生成颜色, 也可以支持颜色的运算 <a href="http://lesscss.org/functions/#color-operations" target="_blank" rel="noopener">文档</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rgb(255,0,0)		output=&gt;		#FF0000</span><br><span class="line">rgba(10,50,50)	output=&gt;		rgba(10,50,50)</span><br></pre></td></tr></table></figure>
+<h4 id="7-运算符"><a href="#7-运算符" class="headerlink" title="7. 运算符"></a>7. 运算符</h4><p>可以直接在CSS预处理器中进行计算, 提供了多种计算函数 <a href="http://lesscss.org/functions/#math-functions" target="_blank" rel="noopener">文档</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">	margin: (10px * 2)</span><br><span class="line">&#125;</span><br><span class="line">sin(1);</span><br><span class="line">cos(0)</span><br></pre></td></tr></table></figure>
 
     
   </div>
